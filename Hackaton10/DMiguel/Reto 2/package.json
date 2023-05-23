@@ -1,0 +1,27 @@
+{
+  "name": "reto_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pana-miguel/pachaFront.git"
+  },
+  "keywords": [
+    "reto2hack10",
+    "ret2hack10",
+    "reto2-hackaton10"
+  ],
+  "author": "DominguezvalentinMiguel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pana-miguel/pachaFront/issues"
+  },
+  "homepage": "https://github.com/pana-miguel/pachaFront#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

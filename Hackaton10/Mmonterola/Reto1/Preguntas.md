@@ -1,0 +1,4 @@
+- ¿Cómo defines una función?
+Para definir una función en JavaScript se utiliza la sintaxis "function nombreFuncion(parametros) { cuerpo de la función }", donde "nombreFuncion" es el nombre que se le dará a la función y "parametros" es una lista de variables separadas por coma que se utilizarán dentro de la función. El cuerpo de la función contiene las instrucciones que se ejecutarán cuando se llame a la función.
+- ¿Hasta cuantos argumentos puedes declarar en una función?
+En JavaScript no hay una cantidad máxima de argumentos que se puedan declarar en una función, pero sí hay un límite práctico que viene dado por el tamaño máximo del stack de llamadas. El tamaño máximo del stack varía según el navegador y la plataforma, pero suele ser alrededor de 5000 a 10000 llamadas.

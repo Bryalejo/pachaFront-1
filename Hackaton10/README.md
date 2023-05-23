@@ -5,17 +5,6 @@
 ### I.	Es hora de demostrar lo aprendido:
 Demostrarás todo lo aprendido en este reto que se basará en las clases dictadas durante la semana.
 ### II.	Insumos para resolver el Reto:
-- https://docs.google.com/document/d/1aJlprbfiKADx-IazY9MMaeB84gsUR-0engVPEkWipNc/edit?usp=sharing
-- Conocimientos adquiridos en las semanas posteriores
-- Documentación de las semanas anteriores
-
-### III.	Descripción del reto
-- Investigar y resolver las preguntas y ejercicios planteados
-- Resolver problemas, definir algoritmos, utilizando las nuevas funcionalidades de ES6+ y los métodos de los Objetos de ECMASCRIPT
-
-### IV.	Pasos a seguir para resolver los retos: 
-
-- El docente indicará si este reto se resolverá de manera individual o grupal
 
 ## Reto 1:
 
@@ -47,7 +36,7 @@ https://docs.google.com/document/d/1aJlprbfiKADx-IazY9MMaeB84gsUR-0engVPEkWipNc/
 
 ### VI.	Presentación del Reto
 - El documento debe ser presentado de manera individual o grupal (según se coordine con el docente)
-- El tiempo de cada presentación lo definirá el docente a cargo
+- El tiempo de cada presentación lo definirá el docente a cargo-=]
 
 ### VII.	Feedback
 - El docente dará feedback a los estudiantes sobre los ejercicios realizados

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hackaton 10 | Reto 02</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <h1 class="header__title">
+                Hackaton 10 Reto 02
+            </h1>
+            <p class="header__description">
+                Resolver problemas, definir algoritmos, utilizando las nuevas funcionalidades de ES6+ y los métodos de los Objetos de ECMASCRIPT
+            </p>
+        </header>
+
+        <main class="main">
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    1. Utilizando función arrow, crear una función que reciba como parámetros un nombre, apellido y edad y los retorne en un string concatenado “Hola mi nombre es sebastián yabiku y mi edad 33”:
+                </h2>
+                <button class="algoritmo__btn" id="btn01">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado01"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    2. Cree una función que tome números y devuelva la suma de sus cubos:
+                    sumOfCubes(1, 5, 9) ➞ 855<br><br>
+                    // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
+                </h2>
+                <button class="algoritmo__btn" id="btn02">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado02"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    3. Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js:
+                </h2>
+                <button class="algoritmo__btn" id="btn03">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado03"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    4. Crear una función que reciba n cantidad de argumentos y los sume ( utilizar parametros rest):
+                </h2>
+                <button class="algoritmo__btn" id="btn04">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado04"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    5. Crear una función que reciba un array de valores y filtre los valores que no son string:
+                </h2>
+                <button class="algoritmo__btn" id="btn05">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado05"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    6. Cree una función que tome una matriz de números y devuelva los números mínimos y máximos, en ese orden:<br><br>
+                    minMax([1, 2, 3, 4, 5]) ➞ [1, 5]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn06">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado06"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    7. Escriba una función que tome una matriz de 10 enteros (entre 0 y 9) y devuelva una cadena en forma de un número de teléfono:<br><br>
+                    formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) ➞ "(123) 456-7890"                    
+                </h2>
+                <button class="algoritmo__btn" id="btn07">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado07"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    8. Cree una función que tome una matriz de matrices con números. Devuelve una nueva matriz (única) con el mayor número de cada uno:<br><br>
+                    findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn08">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado08"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    9. Dada una palabra, escriba una función que devuelva el primer índice y el último índice de un carácter:<br><br>
+                    charIndex("hello", "l") ➞ [2, 3]<br>
+                    // The first "l" has index 2, the last "l" has index 3.
+                    <br><br>
+                    charIndex("circumlocution", "c") ➞ [0, 8]<br>
+                    // The first "c" has index 0, the last "c" has index 8.                    
+                </h2>
+                <button class="algoritmo__btn" id="btn09">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado09"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    10. Escriba una función que convierta un objeto en una matriz, donde cada elemento representa un par clave-valor:<br><br>
+                    toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+                </h2>
+                <button class="algoritmo__btn" id="btn10">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado10"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    11. Cree la función que toma una matriz con objetos y devuelve la suma de los presupuestos de las personas:
+                    <br><br>
+                    getBudgets([ <br>
+                      { name: "John", age: 21, budget: 23000 }, <br>
+                      { name: "Steve",  age: 32, budget: 40000 }, <br>
+                      { name: "Martin",  age: 16, budget: 2700 } <br>
+                    ]) ➞ 65700                    
+                </h2>
+                <button class="algoritmo__btn" id="btn11">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado11"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    12. Cree una función que tome una matriz de estudiantes y devuelva una matriz de nombres de estudiantes:<br><br>
+                    getStudentNames([<br>
+                      { name: "Steve" },<br>
+                      { name: "Mike" },<br>
+                      { name: "John" }<br>
+                    ]) ➞ ["Becky", "John", "Steve"]
+                </h2>
+                <button class="algoritmo__btn" id="btn12">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado12"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    13. Escriba una función que convierta un objeto en una matriz de claves y valores:<br><br>
+                    objectToArray({<br>
+                      likes: 2,<br>
+                      dislikes: 3,<br>
+                      followers: 10<br>
+                    }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn13">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado13"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    14. Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados  incluyendo n:<br><br>
+                    squaresSum(3) ➞ 14<br>
+                    // 1² + 2² + 3² =<br>
+                    // 1 + 4 + 9 =<br>
+                    // 14
+                </h2>
+                <button class="algoritmo__btn" id="btn14">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado14"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    15. Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada:<br><br>
+                    multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn15">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado15"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    16. Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero:<br><br>
+                    countdown(5) ➞ [5, 4, 3, 2, 1, 0]
+                </h2>
+                <button class="algoritmo__btn" id="btn16">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado16"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    17. Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños:<br><br>
+                    diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82<br>
+                    // Smallest number is -50, biggest is 32.                    
+                </h2>
+                <button class="algoritmo__btn" id="btn17">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado17"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    18. Cree una función que filtre las cadenas de una matriz y devuelva una nueva matriz que solo contenga enteros:<br><br>
+                    filterList([1, 2, 3, "x", "y", 10]) ➞ [1, 2, 3, 10]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn18">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado18"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    19. Cree una función que tome dos argumentos (elemento, tiempos). El primer argumento (elemento) es el elemento que necesita repetirse, mientras que el segundo argumento (veces) es la cantidad de veces que se debe repetir el elemento. Devuelve el resultado en una matriz:<br><br>
+                    repeat(13, 5) ➞ [13, 13, 13, 13, 13]                    
+                </h2>
+                <button class="algoritmo__btn" id="btn19">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado19"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    20. Escriba una función, .vreplace () que extienda el prototipo de cadena reemplazando todas las vocales en una cadena con una vocal especificada:<br><br>
+                    "apples and bananas".vreplace("u") ➞ "upplus und bununus"                    
+                </h2>
+                <button class="algoritmo__btn" id="btn20">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado20"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    21. Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y devolver una cadena como esta: "¡Encontré a Nemo en [el orden de la palabra que encuentra nemo]!":<br><br>
+                    findNemo("I am finding Nemo !") ➞ "I found Nemo at 4!" 
+                </h2>
+                <button class="algoritmo__btn" id="btn21">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado21"></span>
+            </article>
+
+            <article class="algoritmo">
+                <h2 class="algoritmo__description">
+                    22. Cree una función que capitalice la última letra de cada palabra:<br><br>
+                    capLast("hello") ➞ "hellO"                                       
+                </h2>
+                <button class="algoritmo__btn" id="btn22">
+                    Calcular
+                </button>
+                <span class="algoritmo__answer" id="resultado22"></span>
+            </article>
+        </main>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

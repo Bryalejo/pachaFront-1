@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Reto01</title>
+	</head>
+	<body
+		class="container-md mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4 ite justify-items-center content-center h-screen"
+	>
+		<!-- Ejercicio 1 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 1</h2>
+				<p>Crea una función que retorne la suma de dos números</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-1" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-1" class="modal-toggle" />
+					<label for="my-modal-1" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero 1:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar numero"
+									id="p1num1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 2</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero 2:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar numero"
+									id="p1num2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 2</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP1">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb1" class="btn btn-outline btn-success">Sumar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 2 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 2</h2>
+				<p>
+					Crea una función que retorne la potencia de un número dado, esta función deberá recibir la potencia y el número a
+					potenciar.
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-2" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-2" class="modal-toggle" />
+					<label for="my-modal-2" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar numero"
+									id="p2num1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Numero: 2</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Potencia:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar potencia"
+									id="p2num2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Potencia: 3</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP2">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb2" class="btn btn-outline btn-success">Potenciar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 3 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 3</h2>
+				<p>Crea una función que tome números y devuelva la suma de sus cubos. sumOfCubes(1, 5, 9) ➞ 855</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-3" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+					<label for="my-modal-3" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 1:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p3num1"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 2:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p3num2"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+							</div>
+							<div id="p3Container"></div>
+							<div class="divider"></div>
+							<div class="alert alert-error shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP3">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="delInput" class="btn btn-outline btn-warning">Quitar</label>
+								<label id="addInput" class="btn btn-outline btn-info">Agregar</label>
+								<label id="btnProb3" class="btn btn-outline btn-success">Sumar cubos!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 4 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 4</h2>
+				<p>Escribe una función que tome la base y la altura de un triángulo y devuelva su área. triArea(3, 2) ➞ 3</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-4" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+					<label for="my-modal-4" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Base:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar la base del triangulo"
+									id="p4base"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 3</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Altura:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar el area del triangulo"
+									id="p4altura"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 2</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP4">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb4" class="btn">Area!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 5 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 5</h2>
+				<p>
+					Crea una función llamada calculator que recibe 3 parámetros, dos números y una operación matemática (+,-,/,x,%), y si la
+					operación no es correcta que envié un mensaje “El parámetro no es reconocido” calculator(2,"+", 2) ➞ 4
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-5" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-5" class="modal-toggle" />
+					<label for="my-modal-5" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero 1:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar numero"
+									id="p5num1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 2</span>
+								</label>
+							</div>
+
+							<select class="select select-accent w-full max-w-xs" id="operador">
+								<option value="0" disabled selected>Seleccione operacion</option>
+								<option value="+">+</option>
+								<option value="-">-</option>
+								<option value="/">/</option>
+								<option value="x">x</option>
+								<option value="%">%</option>
+							</select>
+
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero 2:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar numero"
+									id="p5num2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 2</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP5">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb5" class="btn">Sumar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+	<script>
+		const p3Container = document.getElementById('p3Container');
+		const delInput = document.getElementById('delInput');
+		const addInput = document.getElementById('addInput');
+		let inputs = 2;
+		const addInputs = (numInputs) => {
+			const input = document.createElement('div');
+			input.id = `p3input${numInputs}`;
+			input.classList.add('form-control', 'w-full', 'max-w-xs');
+			input.innerHTML = `
+        <label class="label">
+          <span class="label-text">Numero ${numInputs}:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Ingresar numero"
+          id="p3num${numInputs}"
+          class="input input-bordered w-full max-w-xs"
+          required
+        />
+        <label class="label">
+          <span class="label-text-alt"></span>
+          <span class="label-text-alt">Ejemplo: 2</span>
+        </label>
+      `;
+			p3Container.append(input);
+		};
+
+		const delInputs = (numInputs) => {
+			const result = document.getElementById('resultP3');
+
+			if (numInputs <= 2) {
+				resultsContainer[2].classList.remove('alert-success');
+				resultsContainer[2].classList.add('alert-error');
+				result.textContent = 'Debes ingresar minimo 2 numeros';
+				dividers[2].hidden = false;
+				resultsContainer[2].hidden = false;
+				return;
+			}
+			inputs--;
+			const p3input = document.getElementById(`p3input${numInputs}`);
+			p3input.remove();
+		};
+
+		addInput.addEventListener('click', () => {
+			inputs++;
+			addInputs(inputs);
+			console.log(inputs);
+		});
+		delInput.addEventListener('click', () => {
+			delInputs(inputs);
+			console.log(inputs);
+		});
+	</script>
+	<script>
+		const dividers = document.getElementsByClassName('divider');
+		const resultsContainer = document.querySelectorAll('#resultsContainer');
+		for (const iterator of dividers) {
+			iterator.hidden = true;
+		}
+		for (const iterator of resultsContainer) {
+			iterator.hidden = true;
+		}
+		// Ejercicio 01
+		const prob1 = document.getElementById('btnProb1');
+		prob1.addEventListener('click', () => {
+			const p1num1 = document.getElementById('p1num1');
+			const p1num2 = document.getElementById('p1num2');
+			const result = document.getElementById('resultP1');
+			dividers[0].hidden = false;
+			resultsContainer[0].hidden = false;
+			result.innerText = Suma(parseInt(p1num1.value), parseInt(p1num2.value));
+		});
+		// Ejercicio 02
+		const prob2 = document.getElementById('btnProb2');
+		prob2.addEventListener('click', () => {
+			const p2num1 = document.getElementById('p2num1');
+			const p2num2 = document.getElementById('p2num2');
+			const result = document.getElementById('resultP2');
+			dividers[1].hidden = false;
+			resultsContainer[1].hidden = false;
+			result.innerText = Pow(parseInt(p2num1.value), parseInt(p2num2.value));
+		});
+		// Ejercicio 03
+		const prob3 = document.getElementById('btnProb3');
+		prob3.addEventListener('click', () => {
+			const numbers = [];
+			for (let i = 1; i <= inputs; i++) {
+				const p3num = document.getElementById(`p3num${i}`);
+				numbers.push(parseInt(p3num.value));
+			}
+			const result = document.getElementById('resultP3');
+			dividers[2].hidden = false;
+			resultsContainer[2].hidden = false;
+			resultsContainer[2].classList.remove('alert-error');
+			resultsContainer[2].classList.add('alert-success');
+			result.innerText = sumOfCubes(...numbers);
+		});
+		// Ejercicio 04
+		const prob4 = document.getElementById('btnProb4');
+		prob4.addEventListener('click', () => {
+			const base = document.getElementById('p4base');
+			const altura = document.getElementById('p4altura');
+			const result = document.getElementById('resultP4');
+			dividers[3].hidden = false;
+			resultsContainer[3].hidden = false;
+			result.innerText = triArea(parseInt(base.value), parseInt(altura.value));
+		});
+		// Ejercicio 05
+		const prob5 = document.getElementById('btnProb5');
+		prob5.addEventListener('click', () => {
+			const p5num1 = document.getElementById('p5num1');
+			const p5num2 = document.getElementById('p5num2');
+			const op = document.getElementById('operador');
+			const result = document.getElementById('resultP5');
+			dividers[4].hidden = false;
+			resultsContainer[4].hidden = false;
+			result.innerText = calculator(parseInt(p5num1.value), op.value, parseInt(p5num2.value));
+		});
+	</script>
+</html>

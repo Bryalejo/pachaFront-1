@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hackaton 09</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2 id="type_ejercicio">%titulo%</h2>
+                    <p>
+                        %parrafo%
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-large" href="#">Ver</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+	<div class="row">
+		<div class="col-md-6">
+            <form id="form-ejercicio">
+                <!-- <label for="dato1">Datos 1</label><input id="dato1" type="text" class="form-control"><label for="dato2">Datos 2</label><input id="dato2" type="text" class="form-control"> -->
+                %inputs%
+                
+            </form>
+            <p>Respuesta : </p>
+            <p id="resultado">
+
+            </p>
+            <a id="ejecutar" class="btn btn-primary">Ejecutar</a>
+		</div>
+	</div>
+   
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script>
+    const ejecutar = document.getElementById('ejecutar');
+    const resultado = document.getElementById('resultado');
+
+    var type_ejercicio = document.getElementById("type_ejercicio");
+
+    function noRefresh(event) {
+        // Prevenir que el formulario se envíe y se recargue la página
+        event.preventDefault();
+    }
+
+    function getPlaceholderInfo(texto = "medida", cant = 2, id ="id"){
+        for (let i = 1; i < cant+1; i++) {
+            document.getElementById(id + i.toString()).placeholder = texto + " " + i.toString();
+        }
+    }
+
+    function getPlaceholderArray(texto = [], id ="id"){
+        for (let i = 1; i < texto.length+1; i++) {
+            document.getElementById(id + i.toString()).placeholder = texto[i-1];
+        }
+    }
+
+    function createInputsN(){
+        const text = '<label for="dato_i">Datos _i</label><input id="dato_i" type="text" class="form-control">'
+        const createInputN = document.getElementById("form-ejercicio");
+        const countInput = parseInt(document.getElementById("createInput").value);
+        let resultado = "";
+        for (let i = 1; i <= countInput; i++) {
+            resultado += text.replace(/_i/g, `${i}`);
+        }
+        createInputN.innerHTML = resultado;
+
+        getPlaceholderInfo("Nota de Alumno",countInput,"dato")
+        return countInput;
+    }
+
+    function ejercicio_1(event = noRefresh()) {
+        // Obtener los valores de los campos de entrada
+        let numero1 = parseInt(document.getElementById('dato1').value);
+        let numero2 = parseInt(document.getElementById('dato2').value);
+        // Sumar los números
+        let suma = numero1 + numero2;
+        // Mostrar el resultado en el contenedor
+        resultado.innerText = `La suma de ${numero1} y ${numero2} es ${suma}.`;
+    }
+
+    function ejercicio_2(event = noRefresh()) {
+        let nota1 = parseInt(document.getElementById('dato1').value);
+        let nota2 = parseInt(document.getElementById('dato2').value);
+        let nota3 = parseInt(document.getElementById('dato3').value);
+        let nota4 = parseInt(document.getElementById('dato4').value);
+
+        if (nota1 <=20 & nota2 <=20 & nota3 <=20 & nota4<=20) {
+            let promedio = (nota1 + nota2 + nota3 + nota4)/4;
+            // Mostrar el resultado en el contenedor
+            resultado.innerText = `El promedio de las 4 notas es ${promedio}.`;
+        } else {
+            resultado.innerText = `Error ingreso una nota mayor a 20`;
+        }
+    }
+
+    function ejercicio_3(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let dato2 = parseInt(document.getElementById('dato2').value);
+        let rpta = dato1 * dato2;
+        // Mostrar el resultado en el contenedor
+        resultado.innerText = `El area del reactangulo es ${rpta}.`;
+    }
+
+    function ejercicio_4(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let dato2 = parseInt(document.getElementById('dato2').value);
+        let area = dato1*dato2/2;
+        resultado.innerText = `El area del triangulo es ${area}.`;
+    }
+
+    function ejercicio_5(event = noRefresh()) {
+        const pi = 3.1416
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let area = pi*(dato1**2);
+        resultado.innerText = `El area del circulo es ${area}.`;
+    }
+
+    function ejercicio_5(event = noRefresh()) {
+        const pi = 3.1416
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let area = pi*(dato1**2);
+        resultado.innerText = `El area del circulo es ${area}.`;
+    }
+
+    function ejercicio_6(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let dato2 = parseInt(document.getElementById('dato2').value);
+        let sueldoSem = dato1*dato2;
+        resultado.innerText = `El area del circulo es ${sueldoSem}.`;
+    }
+    
+    function ejercicio_6(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let sueldoSem = dato1*dato2;
+        resultado.innerText = `El area del circulo es ${sueldoSem}.`;
+    }
+
+    function ejercicio_7(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let sueldoSem = dato1*39.3701;
+        resultado.innerText = `Los ${dato1} metros son en pulgadas ${sueldoSem}.`;
+    }
+
+    function ejercicio_8(event = noRefresh()) {
+        let dato1 = parseFloat(document.getElementById('dato1').value);
+        let enDolar = dato1*0.27;
+        resultado.innerText = `Los Soles ${dato1} son en Dolar ${enDolar}.`;
+    }
+
+    function ejercicio_9(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let añoAct = new Date().getFullYear();
+        let edad = añoAct - dato1;
+        resultado.innerText = `La edad del empleado es ${edad}.`;
+    }
+
+    function ejercicio_10(event = noRefresh()) {
+        let dato1 = document.getElementById('dato1').value;
+        let dato2 = parseFloat(document.getElementById('dato2').value);
+        let dato3 = document.getElementById('dato3').value;
+        let dato4 = parseFloat(document.getElementById('dato4').value);
+        let dato5 = document.getElementById('dato5').value;
+        let dato6 = parseFloat(document.getElementById('dato6').value);
+        
+        menor = Math.min(dato2,dato4,dato6);
+        switch (menor) {
+            case dato2:
+                resultado.innerText = `${dato1} es la persona con menor edad ${menor}`;                break;
+            case dato4:
+                resultado.innerText = `${dato3} es la persona con menor edad ${menor}`;
+                break;
+            case dato6:
+                resultado.innerText = `${dato5} es la persona con menor edad ${menor}`;
+                break;
+        }
+    }
+
+    function ejercicio_11(event = noRefresh()) {
+        let dato1 = parseInt(document.getElementById('dato1').value);
+        let pago=0;
+        switch (dato1) {
+            case 1:
+                pago = 100;
+                break;
+            case 2:
+                pago = 200;
+                break;
+            case 3:
+                pago = 300;
+                break;
+            case 4:
+                pago = 400;
+                break;
+            case 5:
+                pago = 500
+                break;
+            default:
+                pago = 1000
+                break;
+        }
+        resultado.innerText = `El pago del emplado es ${pago} por trabajar ${dato1} meses.`;
+    }
+
+    function ejercicio_12(event = noRefresh()) {
+        let saldoInicial = 1500;
+        for (let i = 0; i < 6; i++) {
+            saldoInicial += saldoInicial*0.1;
+        }
+        resultado.innerText = `El Saldo que recibe en 6 años es de ${saldoInicial}.`;
+    }
+
+    function ejercicio_13(event = noRefresh()) {
+        i = 1;
+        let aprovados = 0;
+        let desaprovados = 0;
+        while (document.getElementById("dato"+i)) {
+            nota = parseInt(document.getElementById("dato"+i).value);
+            if(nota >= 11) aprovados++;
+            else desaprovados++;
+            i++;
+        }
+        resultado.innerText = `La Cantidad de Aprobados son ${aprovados} y la cantidad de desaprovados son ${desaprovados}`
+    }
+
+    function ejercicio_14(event = noRefresh()) {
+        let allFocos = parseInt(document.getElementById('dato1').value);
+        let allFocosV = parseInt(document.getElementById('dato2').value);
+        let allFocosB = parseInt(document.getElementById('dato3').value);
+        let allFocosR = parseInt(document.getElementById('dato4').value);
+
+        if (allFocos == allFocosV + allFocosB + allFocosR) {
+            resultado.innerText = `La cantidad de focos verde son ${allFocosV}, La cantidad de focos blancos son ${allFocosB}, La cantidad de focos rojo son ${allFocosR}`;
+        } else {
+            resultado.innerText = `Error , la suma de los focos excede el total del lote de focos`;
+        }
+    }
+
+    function ejercicio_15(event = noRefresh()) {
+        edad = parseInt(document.getElementById("dato1").value);
+        if (edad >= 18) {
+            resultado.innerText = `Usted esta apto para votar en estas elecciones`;
+        }else{
+            resultado.innerText = `Usted aun es menor de edad, no puede participar en las elecciones`;
+        }
+        
+    }
+
+
+    // Declaramos un flujo de control segun el ejercicio que tengamos en pantalla   
+    let ejercicio_cont = type_ejercicio.textContent;
+
+    switch (ejercicio_cont) {
+        case "Ejercicio 01":
+            ejecutar.addEventListener('click', ejercicio_1);
+            break;
+        case "Ejercicio 02":
+            getPlaceholderInfo("nota",4,"dato");
+            ejecutar.addEventListener('click', ejercicio_2);
+            break;
+        case "Ejercicio 03":
+            getPlaceholderInfo("lado",2,"dato");
+            ejecutar.addEventListener('click', ejercicio_3);
+            break;
+        case "Ejercicio 04":
+            getPlaceholderArray(["altura","base"],"dato");
+            ejecutar.addEventListener('click', ejercicio_4);
+            break;
+        case "Ejercicio 05":
+            
+            ejecutar.addEventListener('click', ejercicio_5);
+            break;
+        case "Ejercicio 06":
+            getPlaceholderArray(["horas trabajadas","pago por hora"],"dato");
+            ejecutar.addEventListener('click', ejercicio_6);
+            break;
+        case "Ejercicio 07":
+            getPlaceholderInfo("metros",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_7);
+            break;
+        case "Ejercicio 08":
+            getPlaceholderInfo("cantidad en Soles",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_8);
+            break;
+        case "Ejercicio 09":
+            getPlaceholderInfo("Años de Nacimiento",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_9);
+            break;
+        case "Ejercicio 10":
+            aux_ejer = Array(3).fill(["Nombre de Persona","Edad de Persona"]).flat();
+            getPlaceholderArray(aux_ejer,"dato");
+            ejecutar.addEventListener('click', ejercicio_10);
+            break;
+        case "Ejercicio 11":
+            getPlaceholderInfo("antiguedad en la tienda [ años ]",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_11);
+            break;
+        case "Ejercicio 12":
+            ejecutar.addEventListener('click', ejercicio_12);
+            break;
+        case "Ejercicio 13":
+            const createInputN = document.getElementById("form-ejercicio");
+            createInputN.innerHTML = '<label for="createInput">Cantidad de Alumnos</label><input id="createInput" type="text" class="form-control"><a id="newInputs" class="btn btn-primary">Crear</a>';
+            const newInput = document.getElementById("newInputs");
+            
+
+            newInput.addEventListener('click',createInputsN);
+            ejecutar.addEventListener('click', ejercicio_13);
+            break;
+        case "Ejercicio 14":
+            getPlaceholderArray(["Cantidad de Focos en Total en el Lote","Cant. de focos Verdes","Cant. de focos Blancos","Cant. de focos Rojos"],"dato");
+            ejecutar.addEventListener('click', ejercicio_14);
+            break;
+        case "Ejercicio 15":
+            getPlaceholderInfo("Edad",1,"dato");
+            ejecutar.addEventListener('click', ejercicio_15);
+            break;
+        default:
+            break;
+    }
+</script>
+</body>
+</html>

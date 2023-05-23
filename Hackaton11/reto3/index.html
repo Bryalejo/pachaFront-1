@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="todolist">
+        <h1>Trabajo Semanales</h1>
+        
+        <form id="formulario" class="ingreso-datos">
+            
+            <label for="semana">Semana:</label>
+            <input id="semana" type="text" id="semana" name="">
+            <label for="">Fecha de entrega:</label>
+            <input id="date" type="date" id="fecha" name="nombre">
+           <div class="button">
+            <button type="submit" id="agregar">Agregar</button>
+           </div>
+            
+        </form>
+    </div>
+ 
+    <table id="tablaDatos">
+        <thead>
+          <tr>
+            <th>Tarea</th>
+            <th>Fecha</th>
+            <th>Completado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán las filas de datos -->
+        </tbody>
+      </table>
+     
+
+
+<script src="index.js"></script>
+</body>
+</html>

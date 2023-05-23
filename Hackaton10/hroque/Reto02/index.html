@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Reto02</title>
+	</head>
+	<body
+		class="container-md mx-auto p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4 ite justify-items-center content-center h-full"
+	>
+		<!-- Ejercicio 1 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 1</h2>
+				<p>
+					Utilizando función arrow, crear una función que reciba como parámetros un nombre, apellido y edad y los retorne en un
+					string concatenado “Hola mi nombre es sebastián yabiku y mi edad 33”
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-1" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-1" class="modal-toggle" />
+					<label for="my-modal-1" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Nombre:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar nombre"
+									id="p1Nom"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: Heri</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Apellido:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar apellidos"
+									id="p1Ape"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: Roque</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Edad:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar edad"
+									id="p1Edad"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 20</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP1">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb1" class="btn btn-outline btn-success">Saludar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 2 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 2</h2>
+				<p>Crea una función que tome números y devuelva la suma de sus cubos. sumOfCubes(1, 5, 9) ➞ 855</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-2" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-2" class="modal-toggle" />
+					<label for="my-modal-2" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 1:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p2num1"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 2:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p2num2"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+							</div>
+							<div id="p2Container"></div>
+							<div class="divider"></div>
+							<div class="alert alert-error shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP2">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="delInput" class="btn btn-outline btn-warning">Quitar</label>
+								<label id="addInput" class="btn btn-outline btn-info">Agregar</label>
+								<label id="btnProb2" class="btn btn-outline btn-success">Sumar cubos!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 3 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 3</h2>
+				<p>Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-3" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+					<label for="my-modal-3" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valor:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p3Valor"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt"></span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span
+										>Solo se acepta los tipos number y string, si quiere ingresar otros tipos de datos, puede realizarlo desde la
+										consola con la funcion ➞ <b>typeOF([1, 2, 3]);</b></span
+									>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP3">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb3" class="btn btn-outline btn-success">TypeOf!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 4 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 4</h2>
+				<p>Crear una función que reciba n cantidad de argumentos y los sume ( utilizar parametros rest)</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-4" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+					<label for="my-modal-4" class="modal cursor-pointer">
+						<form method="GET" class="modal-box relative" id="p4Form" for="">
+							<div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 1:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p4num1"
+										name="p4num1"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+								<div class="form-control w-full max-w-xs">
+									<label class="label">
+										<span class="label-text">Numero 2:</span>
+									</label>
+									<input
+										type="number"
+										placeholder="Ingresar numero"
+										id="p4num2"
+										name="p4num2"
+										class="input input-bordered w-full max-w-xs"
+										required
+									/>
+									<label class="label">
+										<span class="label-text-alt"></span>
+										<span class="label-text-alt">Ejemplo: 2</span>
+									</label>
+								</div>
+							</div>
+							<div id="p4Container"></div>
+							<div class="divider"></div>
+							<div class="alert alert-error shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP4">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="delInput4" class="btn btn-outline btn-warning">Quitar</label>
+								<label id="addInput4" class="btn btn-outline btn-info">Agregar</label>
+								<button type="submit" id="btnProb4" class="btn btn-outline btn-success">Sumar!</button>
+							</div>
+						</form>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 5 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 5</h2>
+				<p>Crear una función que reciba un array de valores y filtre los valores que no son string</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-5" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-5" class="modal-toggle" />
+					<label for="my-modal-5" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p5Valor"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 1, 3, 2, Hola, 1, 2</span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>Debes ingresar valores con separandolos por "," &nbsp; Ejemplo: ➞ <b>1, 3, 2, Hola, 1, 2</b></span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP5">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb5" class="btn btn-outline btn-success">Filtrar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Ejercicio 6 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 6</h2>
+				<p>
+					Cree una función que tome una matriz de números y devuelva los números mínimos y máximos, en ese orden. minMax([1, 2, 3,
+					4, 5]) ➞ [1, 5]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-6" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+					<label for="my-modal-6" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p6Valor"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 1, 3, 2, 1, 2</span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>Debes ingresar valores con separandolos por "," &nbsp; Ejemplo: ➞ <b>1, 3, 2, 5, 9, 2</b></span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP6">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb6" class="btn btn-outline btn-success">MinMax!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 7 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 7</h2>
+				<p>
+					Escriba una función que tome una matriz de 10 enteros (entre 0 y 9) y devuelva una cadena en forma de un número de
+					teléfono. formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) ➞ "(123) 456-7890"
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-7" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-7" class="modal-toggle" />
+					<label for="my-modal-7" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p7Valor"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0</span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span
+										>Debes ingresar valores con separandolos por "," &nbsp; Ejemplo: ➞ <b>1, 2, 3, 4, 5, 6, 7, 8, 9, 0</b></span
+									>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP7">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb7" class="btn btn-outline btn-success">PHONE!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 8 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 8</h2>
+				<p>
+					Cree una función que tome una matriz de matrices con números. Devuelve una nueva matriz (única) con el mayor número de
+					cada uno. findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-8" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-8" class="modal-toggle" />
+					<label for="my-modal-8" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores 1:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p8Valor1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 4, 2, 7, 1</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores 2:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p8Valor2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 1, 2, 0</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Valores 3:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valores"
+									id="p8Valor3"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 4, 2, 7, 1</span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>Debes ingresar valores con separandolos por "," &nbsp; Ejemplo: ➞ <b>22, 30, 7, 14</b></span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb8" class="btn btn-outline btn-success">Max!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 9 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 9</h2>
+				<p>
+					Dada una palabra, escriba una función que devuelva el primer índice y el último índice de un carácter.
+					<br />charIndex("hello", "l") ➞ [2, 3]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-9" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-9" class="modal-toggle" />
+					<label for="my-modal-9" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">String:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p9String"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: hello</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Caracter:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar caracter"
+									id="p9Car"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: l</span>
+								</label>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP9">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb9" class="btn btn-outline btn-success">Index!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 10 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 10</h2>
+				<p>
+					Escriba una función que convierta un objeto en una matriz, donde cada elemento representa un par clave-valor. toArray({
+					a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-10" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-10" class="modal-toggle" />
+					<label for="my-modal-10" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span
+										>Para ejecutar este ejercicio, debes abre la consola y ejecutar: &nbsp;➞ <b>toArray({ a: 1, b: 2 })</b></span
+									>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 11 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 11</h2>
+				<p>Cree la función que toma una matriz con objetos y devuelve la suma de los presupuestos de las personas.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-11" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-11" class="modal-toggle" />
+					<label for="my-modal-11" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>getBudgets([ <br />
+											&emsp;{ name: "John", age: 21, budget: 23000 }, <br />
+											&emsp;{ name: "Steve", age: 32, budget: 40000 }, <br />
+											&emsp;{ name: "Martin", age: 16, budget: 2700 } <br />
+											])</b
+										>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 12 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 12</h2>
+				<p>Cree una función que tome una matriz de estudiantes y devuelva una matriz de nombres de estudiantes.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-12" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-12" class="modal-toggle" />
+					<label for="my-modal-12" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>getStudentNames([ <br />
+											&emsp;{ name: "Steve" }, <br />
+											&emsp;{ name: "Mike" }, <br />
+											&emsp;{ name: "John" } <br />
+											])</b
+										>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 13 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 13</h2>
+				<p>Escriba una función que convierta un objeto en una matriz de claves y valores.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-13" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-13" class="modal-toggle" />
+					<label for="my-modal-13" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>objectToArray({ <br />
+											&emsp;likes: 2, <br />
+											&emsp;dislikes: 3, <br />
+											&emsp;followers: 10 <br />
+											})</b
+										>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 14 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 14</h2>
+				<p>
+					Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados incluyendo n. squaresSum(3) ➞
+					14
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-14" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-14" class="modal-toggle" />
+					<label for="my-modal-14" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero N:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar valor"
+									id="p14N"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 22</span>
+								</label>
+							</div>
+							<!-- <div class="alert shadow-lg">
+								
+								<div>
+									
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>objectToArray({ <br />
+											&emsp;likes: 2, <br />
+											&emsp;dislikes: 3, <br />
+											&emsp;followers: 10 <br />
+											})</b
+										>
+									</span>
+								</div>
+							</div> -->
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP14">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb14" class="btn btn-outline btn-success">Suma de cuadrados!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 15 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 15</h2>
+				<p>Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-15" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-15" class="modal-toggle" />
+					<label for="my-modal-15" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b>multiplyByLength([2, 3, 1, 0])</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 16 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 16</h2>
+				<p>
+					Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero
+					<br />
+					countdown(5) ➞ [5, 4, 3, 2, 1, 0]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-16" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-16" class="modal-toggle" />
+					<label for="my-modal-16" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero N:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar valor"
+									id="p16N"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 22</span>
+								</label>
+							</div>
+							<!-- <div class="alert shadow-lg">
+								
+								<div>
+									
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>objectToArray({ <br />
+											&emsp;likes: 2, <br />
+											&emsp;dislikes: 3, <br />
+											&emsp;followers: 10 <br />
+											})</b
+										>
+									</span>
+								</div>
+							</div> -->
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP16">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb16" class="btn btn-outline btn-success">Conteo regresivo!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 17 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 17</h2>
+				<p>Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-17" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-17" class="modal-toggle" />
+					<label for="my-modal-17" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b>diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21])</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 18 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 18</h2>
+				<p>Cree una función que filtre las cadenas de una matriz y devuelva una nueva matriz que solo contenga enteros.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-18" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-18" class="modal-toggle" />
+					<label for="my-modal-18" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b>filterList([1, 2, 3, "x", "y", 10])</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP8">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<!-- <label id="btnProb8" class="btn btn-outline btn-success">Max!</label> -->
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 19 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 19</h2>
+				<p>
+					Cree una función que tome dos argumentos (elemento, tiempos). El primer argumento (elemento) es el elemento que necesita
+					repetirse, mientras que el segundo argumento (veces) es la cantidad de veces que se debe repetir el elemento. Devuelve
+					el resultado en una matriz.
+					<br />
+					repeat(13, 5) ➞ [13, 13, 13, 13, 13]
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-19" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-19" class="modal-toggle" />
+					<label for="my-modal-19" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Numero N:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar valor"
+									id="p19N1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 22</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Repetir:</span>
+								</label>
+								<input
+									type="number"
+									placeholder="Ingresar valor"
+									id="p19N2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 4</span>
+								</label>
+							</div>
+							<!-- <div class="alert shadow-lg">
+								
+								<div>
+									
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, debes abre la consola y ejecutar: <br />➞
+										<b
+											>objectToArray({ <br />
+											&emsp;likes: 2, <br />
+											&emsp;dislikes: 3, <br />
+											&emsp;followers: 10 <br />
+											})</b
+										>
+									</span>
+								</div>
+							</div> -->
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP19">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb19" class="btn btn-outline btn-success">Repite!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 20 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 20</h2>
+				<p>
+					Escriba una función, .vreplace () que extienda el prototipo de cadena reemplazando todas las vocales en una cadena con
+					una vocal especificada.
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-20" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-20" class="modal-toggle" />
+					<label for="my-modal-20" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">String:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p20N1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 22</span>
+								</label>
+							</div>
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">Vocal:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p20N2"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: 4</span>
+								</label>
+							</div>
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar este ejercicio, puedes abrir la consola y ejecutar: <br />➞
+										<b>"apples and bananas".vreplace("u")</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP20">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb20" class="btn btn-outline btn-success">Reemplazar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 21 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 21</h2>
+				<p>
+					Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y devolver una cadena como esta: "¡Encontré a Nemo en
+					[el orden de la palabra que encuentra nemo]!".
+				</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-21" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-21" class="modal-toggle" />
+					<label for="my-modal-21" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">String:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p21N1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: Buscando a Nemo</span>
+								</label>
+							</div>
+
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Recordar que debe ser exactamente "Nemo", para ejecutar rapidamente copiar: <br />➞
+										<b>Buscando a Nemo</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP21">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb21" class="btn btn-outline btn-success">Buscar!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ejercicio 22 -->
+		<div class="card w-96 bg-base-100 shadow-xl">
+			<div class="card-body">
+				<h2 class="card-title">Problema 22</h2>
+				<p>Cree una función que capitalice la última letra de cada palabra.</p>
+				<div class="card-actions justify-end">
+					<label for="my-modal-22" class="btn">Ejecutar</label>
+
+					<input type="checkbox" id="my-modal-22" class="modal-toggle" />
+					<label for="my-modal-22" class="modal cursor-pointer">
+						<label class="modal-box relative" for="">
+							<div class="form-control w-full max-w-xs">
+								<label class="label">
+									<span class="label-text">String:</span>
+								</label>
+								<input
+									type="text"
+									placeholder="Ingresar valor"
+									id="p22N1"
+									class="input input-bordered w-full max-w-xs"
+									required
+								/>
+								<label class="label">
+									<span class="label-text-alt"></span>
+									<span class="label-text-alt">Ejemplo: hello</span>
+								</label>
+							</div>
+
+							<div class="alert shadow-lg">
+								<div>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										class="stroke-current flex-shrink-0 w-6 h-6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										></path>
+									</svg>
+									<span>
+										Para ejecutar rapidamente copiar: <br />➞
+										<b>Este es el reto02 de la hackaton10</b>
+									</span>
+								</div>
+							</div>
+							<div class="divider"></div>
+							<div class="alert alert-success shadow-lg" id="resultsContainer">
+								<div>
+									<span id="resultP22">Error</span>
+								</div>
+							</div>
+							<div class="modal-action">
+								<label id="btnProb22" class="btn btn-outline btn-success">capitalice!</label>
+							</div>
+						</label>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./index.js"></script>
+	<script>
+		const p2Container = document.getElementById('p2Container');
+		const delInput = document.getElementById('delInput');
+		const addInput = document.getElementById('addInput');
+		let inputs = 2;
+		const addInputs = (numInputs) => {
+			const input = document.createElement('div');
+			input.id = `p2input${numInputs}`;
+			input.classList.add('form-control', 'w-full', 'max-w-xs');
+			input.innerHTML = `
+        <label class="label">
+          <span class="label-text">Numero ${numInputs}:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Ingresar numero"
+          id="p2num${numInputs}"
+          class="input input-bordered w-full max-w-xs"
+          required
+        />
+        <label class="label">
+          <span class="label-text-alt"></span>
+          <span class="label-text-alt">Ejemplo: 2</span>
+        </label>
+      `;
+			p2Container.append(input);
+		};
+
+		const delInputs = (numInputs) => {
+			const result = document.getElementById('resultP2');
+
+			if (numInputs <= 2) {
+				resultsContainer[1].classList.remove('alert-success');
+				resultsContainer[1].classList.add('alert-error');
+				result.textContent = 'Debes ingresar minimo 2 numeros';
+				dividers[1].hidden = false;
+				resultsContainer[1].hidden = false;
+				return;
+			}
+			inputs--;
+			const p2input = document.getElementById(`p2input${numInputs}`);
+			p2input.remove();
+		};
+
+		addInput.addEventListener('click', () => {
+			inputs++;
+			addInputs(inputs);
+			// console.log(inputs);
+		});
+		delInput.addEventListener('click', () => {
+			delInputs(inputs);
+			// console.log(inputs);
+		});
+	</script>
+	<script>
+		const p4Container = document.getElementById('p4Container');
+		const delInput4 = document.getElementById('delInput4');
+		const addInput4 = document.getElementById('addInput4');
+		let inputsP4 = 2;
+		const addInputs4 = (numInputs) => {
+			const input = document.createElement('div');
+			input.id = `p4input${numInputs}`;
+			input.classList.add('form-control', 'w-full', 'max-w-xs');
+			input.innerHTML = `
+        <label class="label">
+          <span class="label-text">Numero ${numInputs}:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Ingresar numero"
+          id="p4num${numInputs}"
+          name="p4num${numInputs}"
+          class="input input-bordered w-full max-w-xs"
+          required
+        />
+        <label class="label">
+          <span class="label-text-alt"></span>
+          <span class="label-text-alt">Ejemplo: 2</span>
+        </label>
+      `;
+			p4Container.append(input);
+		};
+
+		const delInputs4 = (numInputs) => {
+			const result = document.getElementById('resultP4');
+
+			if (numInputs <= 2) {
+				resultsContainer[3].classList.remove('alert-success');
+				resultsContainer[3].classList.add('alert-error');
+				result.textContent = 'Debes ingresar minimo 2 numeros';
+				dividers[3].hidden = false;
+				resultsContainer[3].hidden = false;
+				return;
+			}
+			inputsP4--;
+			const p4input = document.getElementById(`p4input${numInputs}`);
+			p4input.remove();
+		};
+
+		addInput4.addEventListener('click', () => {
+			inputsP4 = inputsP4 + 1;
+			addInputs4(inputsP4);
+			// console.log(inputsP4);
+		});
+		delInput4.addEventListener('click', () => {
+			delInputs4(inputsP4);
+			// console.log(inputsP4);
+		});
+	</script>
+
+	<script>
+		const dividers = document.getElementsByClassName('divider');
+		const resultsContainer = document.querySelectorAll('#resultsContainer');
+		for (const iterator of dividers) {
+			iterator.hidden = true;
+		}
+		for (const iterator of resultsContainer) {
+			iterator.hidden = true;
+		}
+		// Ejercicio 01
+		const prob1 = document.getElementById('btnProb1');
+		prob1.addEventListener('click', () => {
+			const p1Nom = document.getElementById('p1Nom');
+			const p1Ape = document.getElementById('p1Ape');
+			const p1Edad = document.getElementById('p1Edad');
+			const result = document.getElementById('resultP1');
+			dividers[0].hidden = false;
+			resultsContainer[0].hidden = false;
+			result.innerText = welcome(p1Nom.value, p1Ape.value, parseInt(p1Edad.value));
+		});
+		// Ejercicio 02
+		const prob2 = document.getElementById('btnProb2');
+		prob2.addEventListener('click', () => {
+			const numbers = [];
+			for (let i = 1; i <= inputs; i++) {
+				const p2num = document.getElementById(`p2num${i}`);
+				numbers.push(parseInt(p2num.value));
+			}
+			const result = document.getElementById('resultP2');
+			dividers[1].hidden = false;
+			resultsContainer[1].hidden = false;
+			resultsContainer[1].classList.remove('alert-error');
+			resultsContainer[1].classList.add('alert-success');
+			result.innerText = sumOfCubes(...numbers);
+		});
+
+		// Ejercicio 03
+		const prob3 = document.getElementById('btnProb3');
+		prob3.addEventListener('click', () => {
+			const p3Valor = document.getElementById('p3Valor');
+			const result = document.getElementById('resultP3');
+			dividers[2].hidden = false;
+			resultsContainer[2].hidden = false;
+			if (isNaN(parseInt(p3Valor.value))) {
+				result.innerText = typeOF(p3Valor.value);
+				return;
+			}
+			result.innerText = typeOF(parseInt(p3Valor.value));
+		});
+
+		// Ejercicio 05
+		const prob5 = document.getElementById('btnProb5');
+		prob5.addEventListener('click', () => {
+			const p5Valor = document.getElementById('p5Valor');
+			const result = document.getElementById('resultP5');
+			dividers[4].hidden = false;
+			resultsContainer[4].hidden = false;
+			result.innerText = filterStrings(p5Valor.value);
+		});
+
+		// Ejercicio 06
+		const prob6 = document.getElementById('btnProb6');
+		prob6.addEventListener('click', () => {
+			const p6Valor = document.getElementById('p6Valor');
+			const result = document.getElementById('resultP6');
+			dividers[5].hidden = false;
+			resultsContainer[5].hidden = false;
+			result.innerText = minMax(p6Valor.value);
+		});
+
+		// Ejercicio 07
+		const prob7 = document.getElementById('btnProb7');
+		prob7.addEventListener('click', () => {
+			const p7Valor = document.getElementById('p7Valor');
+			const result = document.getElementById('resultP7');
+			dividers[6].hidden = false;
+			resultsContainer[6].hidden = false;
+			result.innerText = formatPhoneNumber(p7Valor.value);
+		});
+
+		// Ejercicio 08
+		const prob8 = document.getElementById('btnProb8');
+		prob8.addEventListener('click', () => {
+			const p8Valor1 = document.getElementById('p8Valor1');
+			const p8Valor2 = document.getElementById('p8Valor2');
+			const p8Valor3 = document.getElementById('p8Valor3');
+			const result = document.getElementById('resultP8');
+			dividers[7].hidden = false;
+			resultsContainer[7].hidden = false;
+			result.innerText = findLargestNums(p8Valor1.value, p8Valor2.value, p8Valor3.value);
+		});
+
+		// Ejercicio 09
+		const prob9 = document.getElementById('btnProb9');
+		prob9.addEventListener('click', () => {
+			const p9String = document.getElementById('p9String');
+			const p9Car = document.getElementById('p9Car');
+			const result = document.getElementById('resultP9');
+			dividers[8].hidden = false;
+			resultsContainer[8].hidden = false;
+			result.innerText = charIndex(p9String.value, p9Car.value);
+		});
+
+		// Ejercicio 014
+		const prob14 = document.getElementById('btnProb14');
+		prob14.addEventListener('click', () => {
+			const p14N = document.getElementById('p14N');
+			const result = document.getElementById('resultP14');
+			dividers[13].hidden = false;
+			resultsContainer[13].hidden = false;
+			result.innerText = squaresSum(p14N.value);
+		});
+
+		// Ejercicio 016
+		const prob16 = document.getElementById('btnProb16');
+		prob16.addEventListener('click', () => {
+			const p16N = document.getElementById('p16N');
+			const result = document.getElementById('resultP16');
+			dividers[15].hidden = false;
+			resultsContainer[15].hidden = false;
+			result.innerText = countdown(p16N.value);
+		});
+
+		// Ejercicio 019
+		const prob19 = document.getElementById('btnProb19');
+		prob19.addEventListener('click', () => {
+			const p19N1 = document.getElementById('p19N1');
+			const p19N2 = document.getElementById('p19N2');
+			const result = document.getElementById('resultP19');
+			dividers[18].hidden = false;
+			resultsContainer[18].hidden = false;
+			result.innerText = repeat(p19N1.value, p19N2.value);
+		});
+
+		// Ejercicio 020
+		const prob20 = document.getElementById('btnProb20');
+		prob20.addEventListener('click', () => {
+			const p20N1 = document.getElementById('p20N1');
+			const p20N2 = document.getElementById('p20N2');
+			const result = document.getElementById('resultP20');
+			dividers[19].hidden = false;
+			resultsContainer[19].hidden = false;
+			result.innerText = replaceVowel(p20N1.value, p20N2.value);
+		});
+
+		// Ejercicio 021
+		const prob21 = document.getElementById('btnProb21');
+		prob21.addEventListener('click', () => {
+			const p21N1 = document.getElementById('p21N1');
+			const result = document.getElementById('resultP21');
+			dividers[20].hidden = false;
+			resultsContainer[20].hidden = false;
+			result.innerText = findNemo(p21N1.value);
+		});
+
+		// Ejercicio 022
+		const prob22 = document.getElementById('btnProb22');
+		prob22.addEventListener('click', () => {
+			const p22N1 = document.getElementById('p22N1');
+			const result = document.getElementById('resultP22');
+			dividers[21].hidden = false;
+			resultsContainer[21].hidden = false;
+			result.innerText = capLast(p22N1.value);
+		});
+	</script>
+	<!-- Ejercicio 04 -->
+	<script src="./ejercicio4.js"></script>
+</html>

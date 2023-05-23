@@ -1,0 +1,102 @@
+.body{
+    background-color: #2A3B47;
+    display: flex;
+}
+
+.contenido{
+    width: 90%;
+    max-width: max-content;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:"inputResultado inputResultado"
+                        "Opcion Operaciones"
+                        "Numeros Operaciones";
+}
+
+.inputResultado{
+    grid-area: inputResultado;
+}
+
+.botonesOpcion{
+    grid-area: Opcion;
+}
+
+.butonesNumeros{
+    grid-area: Numeros;
+    
+}
+
+.botonesOperaciones{
+    grid-area: Operaciones;
+    display: grid;
+    width: max-content;
+}
+
+
+.contenido .btn{
+    width: 4.3em;
+    height: 4.3em;
+    margin: 3px;
+    border-width: 0.1em;
+    font-weight: 700;
+    font-size : 1em;
+}
+.contenido .btn-outline-primary{
+    box-shadow: 1px 1px 5px #0d6efd, -5px -5px 14px #1f1f1f;
+}
+.contenido .btn-outline-primary{
+    box-shadow: 1px 1px 5px #0d6efd, -5px -5px 14px #1f1f1f;
+}
+.contenido .btn-outline-primary{
+
+    box-shadow: 1px 1px 5px #0d6efd, -5px -5px 14px #1f1f1f;
+}
+
+.contenido .butonesNumeros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:"btn9 btn8 btn7"
+                        "btn6 btn5 btn4"
+                        "btn3 btn2 btn1"
+                        "btn0 btn_ btn_";
+}
+
+.btn9{
+    grid-area: btn9;
+}
+.btn8{
+    grid-area: btn8;
+}
+.btn7{
+    grid-area: btn7;
+}
+.btn6{
+    grid-area: btn6;
+}
+.btn5{
+    grid-area: btn5;
+}
+.btn4{
+    grid-area: btn4;
+}
+.btn3{
+    grid-area: btn3;
+}
+.btn2{
+    grid-area: btn2;
+}
+.btn1{
+    grid-area: btn1;
+}
+.btn0{
+    grid-area: btn0;
+    width: 100%;
+}
+
+.btn_{
+    grid-area: btn_;
+    width: auto !important;
+}

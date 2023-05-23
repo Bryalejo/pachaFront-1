@@ -1,0 +1,20 @@
+input[type="button"] {
+    width: 100%;
+}
+
+.separator-2em {
+    height: 2em;
+    display: block;
+}
+
+.input-resultado {
+    height: 67px;
+    font-size: 44px;
+    text-align: right;
+    margin-bottom: 20px;
+    box-shadow: inset 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+}

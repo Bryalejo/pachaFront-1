@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 10 Max Monterola Reto 2</title>
+</head>
+
+<body>
+
+    <p>1. Utilizando función arrow, crear una función que reciba como parámetros un nombre, apellido y edad y los
+        retorne en un string concatenado “Hola mi nombre es sebastián yabiku y mi edad 33”</p>
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+    </div>
+    <div>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido">
+    </div>
+    <div>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad">
+    </div>
+    <button id="boton">Mostrar Resultado</button>
+    <p id="resultado"></p>
+
+    <p>2. Cree una función que tome números y devuelva la suma de sus cubos.</p>
+
+    <label for="cantidad-numeros">¿Cuántos números desea ingresar?</label>
+    <input type="number" id="cantidad-numeros" min="1">
+    <br>
+    <div id="numeros-container">
+        <!-- Aquí se agregarán los campos de los números ingresados -->
+    </div>
+    <button id="sumar-cubos">Sumar Cubos</button>
+    <br>
+    <p id="resultado1"></p>
+
+    <p>3. Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js
+    </p>
+
+    <div>
+        <label for="input-valor">Ingrese un valor:</label>
+        <input type="text" id="input-valor">
+        <button id="botonn">Calcular tipo de dato</button>
+    </div>
+    <p id="resultado2"></p>
+
+    <p>4. Crear una función que reciba n cantidad de argumentos y los sume utilizar parametros rest</p>
+
+    <form id="sum-form">
+        <label for="num-input">Ingrese los números a sumar (separe con comas):</label>
+        <input type="text" id="num-input" name="numbers">
+        <button type="submit">Sumar</button>
+    </form>
+    <p id="resultado3"></p>
+
+    <p>5. Crear una función que reciba un array de valores y filtre los valores que no son string</p>
+
+    <div>
+        <p>Introduce un array de valores (separados por comas) :</p>
+        <input type="text" id="values">
+        <button onclick="ejercicio5()">Filtrar valores que no son string</button>
+    </div>
+    <p id="resultado4"></p>
+
+    <p>6. Cree una función que tome una matriz de números y devuelva los números mínimos y máximos, en ese orden</p>
+    <div class="ejercicio">
+        <button onclick="ejercicio6();">Consultar</button>
+    </div>
+    <p id="resultado5"></p>
+
+    <p>7. Escriba una función que tome una matriz de 10 enteros (entre 0 y 9) y devuelva una cadena en forma de un
+        número de teléfono.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio7();">Consultar</button>
+    </div>
+
+    <p>8. Cree una función que tome una matriz de matrices con números. Devuelve una nueva matriz (única) con el mayor número de cada uno.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio8();">Consultar</button>
+    </div>
+
+    <p>9. Dada una palabra, escriba una función que devuelva el primer índice y el último índice de un carácter.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio9();">Consultar</button>
+    </div>
+
+    <p>10. Escriba una función que convierta un objeto en una matriz, donde cada elemento representa un par clave-valor.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio10();">Consultar</button>
+    </div>
+
+    <p>11. Cree la función que toma una matriz con objetos y devuelve la suma de los presupuestos de las personas.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio11();">Consultar</button>
+    </div>
+
+    <p>12. Cree una función que tome una matriz de estudiantes y devuelva una matriz de nombres de estudiantes.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio12();">Consultar</button>
+    </div>
+
+    <p>13. Escriba una función que convierta un objeto en una matriz de claves y valores</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio13();">Consultar</button>
+    </div>
+
+    <p>14. Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados  incluyendo n.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio14();">Consultar</button>
+    </div>
+
+    <p>15. Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio15();">Consultar</button>
+    </div>
+
+    <p>16. Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio16();">Consultar</button>
+    </div>
+
+    <p>17. Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio17();">Consultar</button>
+    </div>
+
+    <p>18. Cree una función que filtre las cadenas de una matriz y devuelva una nueva matriz que solo contenga enteros.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio18();">Consultar</button>
+    </div>
+
+    <p>19. Cree una función que tome dos argumentos (elemento, tiempos). El primer argumento (elemento) es el elemento que necesita repetirse, mientras que el segundo argumento (veces) es la cantidad de veces que se debe repetir el elemento. Devuelve el resultado en una matriz.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio19();">Consultar</button>
+    </div>
+    
+    <p>20. Escriba una función, .vreplace () que extienda el prototipo de cadena reemplazando todas las vocales en una cadena con una vocal especificada.</p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio20();">Consultar</button>
+    </div>
+
+    <p>21.Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y devolver una cadena como esta: "¡Encontré a Nemo en [el orden de la palabra que encuentra nemo]!". </p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio21();">Consultar</button>
+    </div>
+
+    <p>22.Cree una función que capitalice la última letra de cada palabra. </p>
+
+    <div class="ejercicio">
+        <button onclick="ejercicio22();">Consultar</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

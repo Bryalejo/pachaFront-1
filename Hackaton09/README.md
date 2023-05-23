@@ -37,7 +37,7 @@ Con unas aplicaciones web cada vez más complejas y una velocidad de navegación
 
 1.	Implementar un algoritmo que reciba 2 argumentos y los sume, el resultado se deberá imprimir en pantalla
 2.	Un estudiante realiza 4 exámenes, calcular el promedio de estos
-3.	Calcular el área de un rectángulo
+3.	Calcular el área de un rectángulo   
 4.	Calcular el área de un triángulo
 5.	Calcular el área de una circunferencia
 6.	Determinar el sueldo semanal de un trabajador basándose en sus horas trabajadas y su salario de hora hombre

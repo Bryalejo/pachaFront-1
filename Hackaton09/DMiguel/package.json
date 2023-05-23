@@ -1,0 +1,29 @@
+{
+  "name": "sv75687870",
+  "version": "1.0.0",
+  "description": "Hackaton 09",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pana-miguel/pachaFront.git"
+  },
+  "keywords": [
+    "hackaton09",
+    "hackaton9",
+    "h09"
+  ],
+  "author": "sv75687870",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pana-miguel/pachaFront/issues"
+  },
+  "homepage": "https://github.com/pana-miguel/pachaFront#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2"
+  }
+}

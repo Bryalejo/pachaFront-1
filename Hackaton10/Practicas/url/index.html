@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12">
+
+                <h1 class="mb-5" style="text-align: center; margin-top: 100px; font-weight: 800; font-size: 50px;">
+                    Extraer parametro de una URL con javascript😲
+                </h1>
+                <form action="#" method="POST">
+                    <P>Mostrando parametros</P>
+                    <input type="text" name="empleado" id="empleado" class="form-control mb-2">
+                    <input type="text" name="tlf" id="tlf" class="form-control mb-2">
+                    <button type="submit" class="btn btn-success btn-block">Enviar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        /* Buscando los valores de la URL con la propiedad  window.location.search de JavaScript */
+        const paramURL = window.location.search
+        console.log(paramURL);
+        
+        //Creamos una instancia de URLSearchParams
+        const parametrosURL = new URLSearchParams(paramURL);
+        console.log(typeof(parametrosURL));
+        
+        /* Recorriendo todos los parametros de la URL */
+        for (let valoresURL of parametrosURL) {
+          console.log(valoresURL);
+        }
+        
+        
+        /*
+        Para acceder a los parámetros de la URL crearemos un objeto de tipo URLSearchParams y 
+        usaremos el método get() para obtener cada uno de los valores
+        */
+        const empleado    = parametrosURL.get('empleado');
+        const tlfEmpleado = parametrosURL.get('tlf');
+        
+        console.info('Nombre del Empleado: ' + empleado + ' y el telefono es: ' + tlfEmpleado );
+        
+        /* Mostrando mis parametros en mi HTML */
+        const inputEmpleado = document.querySelector("#empleado");
+              inputEmpleado.value =(empleado);
+        
+        const inputTlf = document.querySelector("#tlf");
+              inputTlf.value =(tlfEmpleado);
+        
+        /* Como podemos verificar si existe el parámetro en la URL */
+        let valorURL = parametrosURL.has('sexo');
+        console.log(valorURL);
+        
+          </script>
+
+
+</body>
+
+</html>

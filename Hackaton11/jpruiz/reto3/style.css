@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.content{
+    padding: 0 50px;
+}
+
+@media only screen and (max-width: 989px) {
+    .content{
+        padding: 0 7.5vw
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+#todoForm {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#todoForm button {
+    padding: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+    #todoForm input {
+        margin-bottom: 15px;
+    }
+}
+
+#taskInput {
+    width: 400px;
+    padding: 5px;
+}
+
+#filterContainer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#taskTable {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#taskTable th,
+#taskTable td {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+}
+
+#taskTable th {
+    background-color: #f0f0f0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+table tbody tr td button:not(:last-child) {
+    margin-right: 25px;
+}
+
+table tbody tr td:not(:first-child) {
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    table tbody tr td button:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 8px;
+    }
+}
+
+table tbody tr td button {
+    padding: 3px 5px;
+    min-width: 78px ;
+    cursor: pointer;
+}

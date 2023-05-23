@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html data-theme="synthwave" lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reto03 - TODO</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins&family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="font-['Roboto']">
+		<div class="navbar bg-base-100">
+			<div class="navbar-start"></div>
+			<div class="navbar-center">
+				<a class="btn btn-ghost normal-case text-xl">TODOs</a>
+			</div>
+			<div class="navbar-end">
+				<label for="my-modal-1" class="btn btn-ghost btn-circle">
+					<svg
+						width="24px"
+						height="24px"
+						stroke-width="1.5"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						color="#ffffff"
+					>
+						<path
+							d="M6 12h6m6 0h-6m0 0V6m0 6v6"
+							stroke="#ffffff"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+					</svg>
+				</label>
+			</div>
+		</div>
+		<div id="textTareas" class="text-center" hidden><h2>No hay tareas creadas</h2></div>
+		<div id="app" hidden>
+			<div class="overflow-x-auto w-full">
+				<table class="table w-full">
+					<!-- head -->
+					<thead>
+						<tr>
+							<th>
+								<label>
+									<input disabled type="checkbox" class="checkbox" />
+								</label>
+							</th>
+							<th>Nombre</th>
+							<th>Fecha Inicio</th>
+							<th>Fecha Fin</th>
+							<th>Estado</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="tableTodos">
+						<!-- row 1 -->
+					</tbody>
+					<!-- foot -->
+					<tfoot>
+						<tr>
+							<th></th>
+							<th>Nombre</th>
+							<th>Fecha Inicio</th>
+							<th>Fecha Fin</th>
+							<th>Estado</th>
+							<th></th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div class="mx-auto max-w-5xl" id="todo-table"></div>
+		<div id="menu">
+			<div class="btm-nav">
+				<button id="btnHome" class="">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+						/>
+					</svg>
+					<span class="btm-nav-label">Inicio</span>
+				</button>
+				<button id="btnCompletado" class="">
+					<svg
+						width="24px"
+						height="24px"
+						stroke-width="1.5"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						color="#000000"
+					>
+						<path d="M5 13l4 4L19 7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+					</svg>
+					<span class="btm-nav-label">Realizados</span>
+				</button>
+				<button id="btnNoCompletado">
+					<svg
+						width="24px"
+						height="24px"
+						stroke-width="1.5"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						color="#000000"
+					>
+						<path
+							d="M12 7v6M12 17.01l.01-.011"
+							stroke="#ffffff"
+							stroke-width="1.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M3 20.4V3.6a.6.6 0 01.6-.6h16.8a.6.6 0 01.6.6v16.8a.6.6 0 01-.6.6H3.6a.6.6 0 01-.6-.6z"
+							stroke="#ffffff"
+							stroke-width="1.5"
+						></path>
+					</svg>
+					<span class="btm-nav-label">Sin realizar</span>
+				</button>
+			</div>
+		</div>
+	</body>
+	<input type="checkbox" id="my-modal-1" class="modal-toggle" />
+	<label id="modal-1" for="my-modal-1" class="modal cursor-pointer">
+		<label class="modal-box relative" for="">
+			<h3 class="text-2xl uppercase font-['Poppins'] font-bold text-center mb-2">Crear TODO</h3>
+			<form action="get" id="formTodo" class="flex flex-col justify-center items-center">
+				<div class="form-control w-full max-w-xs">
+					<label for="nomTodo" class="label">
+						<span class="label-text">Nombre</span>
+						<span class="label-text-alt text-red-600">(*)</span>
+					</label>
+					<input
+						id="nomTodo"
+						name="nomTodo"
+						type="text"
+						placeholder="Type here"
+						class="input input-secondary input-bordered w-full max-w-xs"
+						required
+					/>
+					<label class="label">
+						<span class="label-text-alt"></span>
+						<span class="label-text-alt">Ejemplo: Sacar la basura</span>
+					</label>
+				</div>
+
+				<!-- <div class="form-control w-full max-w-xs max-h-48">
+					<label for="descTodo" class="label">
+						<span class="label-text">Descripcion</span>
+					</label>
+					<textarea
+						id="descTodo"
+						name="descTodo"
+						class="textarea textarea-info textarea-md textarea-bordered h-24"
+						placeholder="Type here"
+					></textarea>
+				</div> -->
+				<div class="form-control w-full max-w-xs hidden">
+					<label for="fechaTodo" class="label">
+						<span class="label-text">Fecha</span>
+					</label>
+					<input type="date" name="fechaTodo" id="fechaTodo" class="input input-secondary input-bordered" />
+					<label class="label">
+						<span class="label-text-alt"></span>
+						<span class="label-text-alt">Ejemplo: <span id="fechaHoy"></span></span>
+					</label>
+				</div>
+				<div class="form-control items-end w-full max-w-xs mt-4">
+					<div class="btn-group">
+						<button class="btn btn-outline btn-warning" type="reset">Limpiar</button>
+						<input type="submit" class="btn btn-outline btn-primary" value="Crear" />
+					</div>
+				</div>
+			</form>
+		</label>
+	</label>
+
+	<input type="checkbox" id="my-modal-2" class="modal-toggle" />
+	<label id="modal-2" for="my-modal-2" class="modal cursor-pointer">
+		<label class="modal-box relative" for="">
+			<h3 class="text-2xl uppercase font-['Poppins'] font-bold text-center mb-2">Editar TODO</h3>
+			<form action="get" id="formEdit" class="flex flex-col justify-center items-center">
+				<input type="hidden" name="indexId" id="indexId" />
+				<input type="hidden" name="uuid" id="uuid" />
+				<div class="form-control w-full max-w-xs">
+					<label for="nomTodo" class="label">
+						<span class="label-text">Nombre</span>
+						<span class="label-text-alt text-red-600">(*)</span>
+					</label>
+					<input
+						id="nomEdit"
+						name="nomTodo"
+						type="text"
+						placeholder="Type here"
+						class="input input-secondary input-bordered w-full max-w-xs"
+						required
+					/>
+					<label class="label">
+						<span class="label-text-alt"></span>
+						<span class="label-text-alt">Ejemplo: Sacar la basura</span>
+					</label>
+				</div>
+				<div class="form-control items-end w-full max-w-xs mt-4">
+					<div class="btn-group">
+						<button class="btn btn-outline btn-warning" type="reset">Limpiar</button>
+						<input type="submit" class="btn btn-outline btn-primary" value="Editar" />
+					</div>
+				</div>
+			</form>
+		</label>
+	</label>
+	<script type="module" src="./main.js"></script>
+</html>

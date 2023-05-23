@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Usuarios</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-usuarios">
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Datos iniciales (simulados)
+    let usuarios = [
+      { id: 1, nombre: "Usuario 1", correo: "usuario1@example.com" },
+      { id: 2, nombre: "Usuario 2", correo: "usuario2@example.com" },
+      { id: 3, nombre: "Usuario 3", correo: "usuario3@example.com" }
+    ];
+
+    // Función para renderizar la tabla de usuarios
+    function renderizarTabla() {
+      const tablaUsuarios = document.getElementById("tabla-usuarios");
+      tablaUsuarios.innerHTML = "";
+
+      usuarios.forEach(usuario => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
+          <td>${usuario.id}</td>
+          <td>${usuario.nombre}</td>
+          <td>${usuario.correo}</td>
+          <td>
+            <button class="btn btn-primary btn-editar" data-id="${usuario.id}">Editar</button>
+            <button class="btn btn-danger btn-eliminar" data-id="${usuario.id}">Eliminar</button>
+          </td>
+        `;
+
+        tablaUsuarios.appendChild(fila);
+      });
+
+      // Agregar event listeners a los botones de editar y eliminar
+      const btnsEditar = document.getElementsByClassName("btn-editar");
+      for (let i = 0; i < btnsEditar.length; i++) {
+        btnsEditar[i].addEventListener("click", editarUsuario);
+      }
+
+      const btnsEliminar = document.getElementsByClassName("btn-eliminar");
+      for (let i = 0; i < btnsEliminar.length; i++) {
+        btnsEliminar[i].addEventListener("click", eliminarUsuario);
+      }
+    }
+
+    // Función para editar un usuario
+    function editarUsuario() {
+      const usuarioId = parseInt(this.getAttribute("data-id"));
+      const usuario = usuarios.find(usuario => usuario.id === usuarioId);
+      if (usuario) {
+        // Aquí puedes implementar la lógica para editar el usuario, por ejemplo, mostrando un formulario modal para editar los datos.
+        console.log("Editar usuario:", usuario);
+      }
+    }
+
+    // Función para eliminar un usuario
+    function eliminarUsuario() {
+      const usuarioId = parseInt(this.getAttribute("data-id"));
+      const indice = usuarios.findIndex(usuario => usuario.id === usuarioId);
+      if (indice !== -1) {
+        usuarios.splice(indice, 1);
+        renderizarTabla();
+        console.log("Usuario eliminado con ID:", usuarioId);
+      }
+    }
+
+    // Renderizar la tabla inicialmente
+    renderizarTabla();
+  </script>
+</body>
+</html>

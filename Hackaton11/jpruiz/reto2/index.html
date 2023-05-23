@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Hackaton 11</title>
+    <link rel="stylesheet" href="../reto2/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+          <h1>Calculadora</h1>
+          <div class="calculator">
+            <input type="text" id="result" readonly>
+            <div class="buttons">
+              <button onclick="appendNumber(7)">7</button>
+              <button onclick="appendNumber(8)">8</button>
+              <button onclick="appendNumber(9)">9</button>
+              <button onclick="add()">+</button>
+              <button onclick="appendNumber(4)">4</button>
+              <button onclick="appendNumber(5)">5</button>
+              <button onclick="appendNumber(6)">6</button>
+              <button onclick="subtract()">-</button>
+              <button onclick="appendNumber(1)">1</button>
+              <button onclick="appendNumber(2)">2</button>
+              <button onclick="appendNumber(3)">3</button>
+              <button onclick="multiply()">*</button>
+              <button onclick="appendNumber(0)">0</button>
+              <button onclick="power()">^</button>
+              <button onclick="divide()">/</button>
+              <button onclick="remainder()">%</button>
+              <button onclick="clearResult()">C</button>
+              <button onclick="calculate()">=</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="../reto2/script.js"></script>
+</body>
+</html>

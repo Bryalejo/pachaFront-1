@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript y HTTP - RETO 02</title>
+</head>
+<body>
+    <h1> Reto 02 </h1>
+    <ol>
+        <li>
+            <h4>Ejercicio 1</h4>
+            <p>Utilizando función arrow, crear una función que reciba como parámetros un nombre, apellido y edad y los retorne en un string concatenado “Hola mi nombre es sebastián yabiku y mi edad 33”</p>
+
+            <label for="ej1var1">nombre:</label><br>
+            <input type="text" id="ej1var1" name="ej1var1"><br>
+
+            <label for="ej1var2">apellido:</label><br>
+            <input type="text" id="ej1var2" name="ej1var2"><br><br>
+
+            <label for="ej1var3">edad:</label><br>
+            <input type="number" id="ej1var3" name="ej1var3"><br><br>
+
+            <button type="button" onclick="ejercicio1()">OK!</button>
+
+            <p id="ej1rpta"></p>
+        </li>
+
+        <li>
+            <h4>Ejercicio 2</h4>
+            <p>Crea una función que tome números y devuelva la suma de sus cubos. sumOfCubes(1, 5, 9) ➞ 855 // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855</p>
+
+            <label for="ej2num1">Ingresa todos los numeros y luego presiona OK:</label><br>
+            <input type="number" id="ej2num1" name="ej2num1"><br><br>
+
+            <button type="button" onclick="ejercicio2ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio2()">OK!</button>
+            <button type="button" onclick="ejercicio2reset()">Reset</button>
+
+            <p id="ej2numeros"></p>
+            <p id="ej2rpta"></p>
+        </li>
+        <li>
+        <h4>Ejercicio 3</h4>
+        <p>Crear una funcion que me retorne el tipo de valor entregado, invocar la función para los distintos tipos de js</p> 
+        <label for="ej3var1">Ingresa dato y luego presiona OK:</label><br>
+        <input type="text" id="ej3var1" name="ej3var1"><br><br>
+
+        <button type="button" onclick="ejercicio3()">OK!</button>
+
+        <p id="ej3rpta"></p>  
+        </li>
+        <li>
+            <h4>Ejercicio 4</h4>
+            <p>Crear una función que reciba n cantidad de argumentos y los sume (utilizar parametros rest)</p>
+
+            <label for="ej4num1">Ingresa todos los numeros y luego presiona OK:</label><br>
+            <input type="number" id="ej4num1" name="ej4num1"><br><br>
+
+            <button type="button" onclick="ejercicio4ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio4()">OK!</button>
+            <button type="button" onclick="ejercicio4reset()">Reset</button>
+
+            <p id="ej4numeros"></p>
+            <p id="ej4rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 5</h4>
+            <p>Crear una función que reciba un array de valores y filtre los valores que no son string</p>
+
+            <label for="ej5var1">Ingresa todos los datos y luego presiona OK:</label><br>
+            <input type="text" id="ej5var1" name="ej5var1"><br><br>
+
+            <button type="button" onclick="ejercicio5ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio5()">OK!</button>
+            <button type="button" onclick="ejercicio5reset()">Reset</button>
+
+            <p id="ej5rpta"></p>
+        </li>
+
+        <li>
+            <h4>Ejercicio 6</h4>
+            <p>Cree una función que tome una matriz de números y devuelva los números mínimos y máximos, en ese orden.
+                minMax([1, 2, 3, 4, 5]) ➞ [1, 5]</p>
+
+            <label for="ej6var1">Ingresa todos los datos y luego presiona OK:</label><br>
+            <input type="text" id="ej6var1" name="ej6var1"><br><br>
+
+            <button type="button" onclick="ejercicio6ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio6()">OK!</button>
+            <button type="button" onclick="ejercicio6reset()">Reset</button>
+
+            <p id="ej6rpta"></p>
+        </li>
+        
+        <li>
+            <h4>Ejercicio 7</h4>
+            <p>Escriba una función que tome una matriz de 10 enteros (entre 0 y 9) y devuelva una cadena en forma de un número de teléfono.
+                formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) ➞ "(123) 456-7890"</p>
+
+            <label for="ej7var1">Ingresa 10 numeros (del 0 al 9)</label><br>
+            <input type="text" id="ej7var1" name="ej7var1"><br><br>
+
+            <button type="button" onclick="ejercicio7ingresar()">Ingresar</button>
+
+            <p id="ej7rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 8</h4>
+            <p>Cree una función que tome una matriz de matrices con números. Devuelve una nueva matriz (única) con el mayor número de cada uno.
+                findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]</p>
+
+            <label for="ej8var1">Ingresa todos los datos y luego presiona OK:</label><br>
+            <input type="text" id="ej8var1" name="ej8var1"><br><br>
+
+            <button type="button" onclick="ejercicio8ingresar()">Ingresar numero para arreglo</button>
+            <button type="button" onclick="ejercicio8newarray()">Añadir otro arreglo</button>
+            <button type="button" onclick="ejercicio8()">OK!</button>
+            <button type="button" onclick="ejercicio8reset()">Reset</button>
+            
+            <p id="ej8arr"></p>
+            <p id="ej8rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 9</h4>
+            <p>Dada una palabra, escriba una función que devuelva el primer índice y el último índice de un carácter.
+                charIndex("hello", "l") ➞ [2, 3]</p>
+
+            <label for="ej9var1">Ingresa palabra</label><br>
+            <input type="text" id="ej9var1" name="ej9var1"><br>
+
+            <label for="ej9var2">Ingresa caracter</label><br>
+            <input type="text" id="ej9var2" name="ej9var2"><br><br>
+
+
+            <button type="button" onclick="ejercicio9()">OK!</button>
+
+            <p id="ej9rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 10</h4>
+            <p>Escriba una función que convierta un objeto en una matriz, donde cada elemento representa un par clave-valor.
+                toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]</p>
+
+            <label for="ej10var1">Ingresa clave</label><br>
+            <input type="text" id="ej10var1" name="ej10var1"><br><br>
+            <label for="ej10var2">Ingresa valor</label><br>
+            <input type="text" id="ej10var2" name="ej10var2"><br><br>
+
+            <button type="button" onclick="ejercicio10ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio10()">OK!</button>
+            <button type="button" onclick="ejercicio10reset()">Reset</button>
+
+            <p id="ej10rpta"></p>
+
+            <ul id="list"></ul>
+        </li>
+        <li>
+            <h4>Ejercicio 11</h4>
+            <p>Cree la función que toma una matriz con objetos y devuelve la suma de los presupuestos de las personas.</p>
+
+            <label for="ej11var1">Ingresa name</label><br>
+            <input type="text" id="ej11var1" name="ej11var1"><br><br>
+            <label for="ej11var2">Ingresa age</label><br>
+            <input type="text" id="ej11var2" name="ej11var2"><br><br>
+            <label for="ej11var3">Ingresa budget</label><br>
+            <input type="text" id="ej11var3" name="ej11var3"><br><br>
+
+            <button type="button" onclick="ejercicio11ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio11()">OK!</button>
+            <button type="button" onclick="ejercicio11reset()">Reset</button>
+            
+            <p id="ej11arr"></p>
+            <p id="ej11rpta"></p>
+
+            <ul id="list"></ul>
+        </li>
+        <li>
+            <h4>Ejercicio 12</h4>
+            <p>Cree una función que tome una matriz de estudiantes y devuelva una matriz de nombres de estudiantes.
+                getStudentNames([
+                  { name: "Steve" },
+                  { name: "Mike" },
+                  { name: "John" }
+                ]) ➞ ["Becky", "John", "Steve"]</p>
+
+            <label for="ej12var1">Ingresa nombre de student</label><br>
+            <input type="text" id="ej12var1" name="ej12var1"><br><br>
+           
+            <button type="button" onclick="ejercicio12ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio12()">OK!</button>
+            <button type="button" onclick="ejercicio12reset()">Reset</button>
+            
+            <p id="ej12arr"></p>
+            <p id="ej12rpta"></p>
+
+            <ul id="list"></ul>
+        </li>
+        <li>
+            <h4>Ejercicio 13</h4>
+            <p>Escriba una función que convierta un objeto en una matriz de claves y valores.
+                objectToArray({
+                  likes: 2,
+                  dislikes: 3,
+                  followers: 10
+                }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]</p>
+
+            <label for="ej13var1">likes</label><br>
+            <input type="text" id="ej13var1" name="ej13var1"><br><br>
+            <label for="ej13var2">dislikes</label><br>
+            <input type="text" id="ej13var2" name="ej13var2"><br><br>
+            <label for="ej13var3">followers</label><br>
+            <input type="text" id="ej13var3" name="ej13var3"><br><br>
+
+            <button type="button" onclick="ejercicio13()">OK!</button>
+            <button type="button" onclick="ejercicio13reset()">Reset</button>
+            
+            <p id="ej13arr"></p>
+            <p id="ej13rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 14</h4>
+            <p>Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados  incluyendo n.</p>
+
+            <label for="ej14var1">Ingresa numero</label><br>
+            <input type="number" id="ej14var1" name="ej14var1"><br><br>
+            <button type="button" onclick="ejercicio14()">OK!</button>
+            <button type="button" onclick="ejercicio14reset()">Reset</button>
+
+            <p id="ej14rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 15</h4>
+            <p>Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada
+                multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]</p>
+
+            <label for="ej15var1">Ingresa numero</label><br>
+            <input type="number" id="ej15var1" name="ej15var1"><br><br>
+
+            <button type="button" onclick="ejercicio15ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio15()">OK!</button>
+            <button type="button" onclick="ejercicio15reset()">Reset</button>
+            
+            <p id="ej15arr"></p>
+            <p id="ej15rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 16</h4>
+            <p>Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero.
+                countdown(5) ➞ [5, 4, 3, 2, 1, 0]</p>
+
+            <label for="ej16var1">Ingresa numero</label><br>
+            <input type="number" id="ej16var1" name="ej16var1"><br><br>
+            <button type="button" onclick="ejercicio16()">OK!</button>
+
+            <p id="ej16rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 17</h4>
+            <p>Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños.
+                diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82
+                // Smallest number is -50, biggest is 32.</p>
+
+            <label for="ej17var1">Ingresa numero</label><br>
+            <input type="number" id="ej17var1" name="ej17var1"><br><br>
+
+            <button type="button" onclick="ejercicio17ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio17()">OK!</button>
+            <button type="button" onclick="ejercicio17reset()">Reset</button>
+            
+            <p id="ej17arr"></p>
+            <p id="ej17rpta"></p>
+        </li>
+
+        <li>
+            <h4>Ejercicio 18</h4>
+            <p>Cree una función que filtre las cadenas de una matriz y devuelva una nueva matriz que solo contenga enteros.
+                filterList([1, 2, 3, "x", "y", 10]) ➞ [1, 2, 3, 10]</p>
+
+            <label for="ej18var1">Ingresa dato</label><br>
+            <input type="text" id="ej18var1" name="ej18var1"><br><br>
+
+            <button type="button" onclick="ejercicio18ingresar()">Ingresar</button>
+            <button type="button" onclick="ejercicio18()">OK!</button>
+            <button type="button" onclick="ejercicio18reset()">Reset</button>
+            
+            <p id="ej18arr"></p>
+            <p id="ej18rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 19</h4>
+            <p>Cree una función que tome dos argumentos (elemento, tiempos). El primer argumento (elemento) es el elemento que necesita repetirse, mientras que el segundo argumento (veces) es la cantidad de veces que se debe repetir el elemento. Devuelve el resultado en una matriz.
+                repeat(13, 5) ➞ [13, 13, 13, 13, 13]</p>
+
+            <label for="ej19var1">Ingresa numero</label><br>
+            <input type="number" id="ej19var1" name="ej19var1"><br><br>
+            <label for="ej19var2">Ingresa veces que se debe repetir</label><br>
+            <input type="number" id="ej19var2" name="ej19var2"><br><br>
+            <button type="button" onclick="ejercicio19()">OK!</button>
+
+            <p id="ej19rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 20</h4>
+            <p>Escriba una función, .vreplace () que extienda el prototipo de cadena reemplazando todas las vocales en una cadena con una vocal especificada.
+                "apples and bananas".vreplace("u") ➞ "upplus und bununus"</p>
+
+            <label for="ej20var1">Escribe una oracion</label><br>
+            <input type="text" id="ej20var1" name="ej21var1"><br><br>
+            <label for="ej20var2">Escribe una vocal</label><br>
+            <input type="text" id="ej20var2" name="ej21var2"><br><br>
+
+            <button type="button" onclick="ejercicio20()">OK!</button>
+
+            <p id="ej20rpta"></p>
+        </li>
+        <li>
+            <h4>Ejercicio 21</h4>
+            <p>Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y devolver una cadena como esta: "¡Encontré a Nemo en [el orden de la palabra que encuentra nemo]!".
+                findNemo("I am finding Nemo !") ➞ "I found Nemo at 4!"</p>
+
+            <label for="ej21var1">Escribe una oracion</label><br>
+            <input type="text" id="ej21var1" name="ej21var1"><br><br>
+
+            <button type="button" onclick="ejercicio21()">OK!</button>
+
+            <p id="ej21rpta"></p>
+        </li>
+
+        <li>
+            <h4>Ejercicio 22</h4>
+            <p>Cree una función que capitalice la última letra de cada palabra.
+                capLast("hello") ➞ "hellO"</p>
+
+            <label for="ej22var1">Escribe una oracion</label><br>
+            <input type="text" id="ej22var1" name="ej22var1"><br><br>
+
+            <button type="button" onclick="ejercicio22()">OK!</button>
+
+            <p id="ej22rpta"></p>
+        </li>
+
+    Jose Fernando Huarez Reyes
+    
+    <script src="./javascript/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora | Hackaton 11</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <form class="container">
+            <input type="text" id="resultado" class="resultado" autocomplete="off" placeholder="0">
+            
+            <button type="button" id="parentAbierto" class="btnParentAbierto  btnOperador  btnOperador--active">(</button>
+            <button type="button" id="parentCerrado" class="btnParentCerrado  btnOperador  btnOperador--active">)</button>
+            
+            <button type="button" id="resto" class="btnOperador  btnOperador--active">%</button>
+            <button type="button" id="potencia" class="btnOperador  btnOperador--active">x<sup>y</sup></button>
+            <button type="button" id="division" class="btnOperador  btnOperador--active">/</button>
+            <button type="button" id="multiplicacion" class="btnOperador  btnOperador--active">x</button>
+            
+            <button type="button" id="numero7" class="btnNumber  btnNumber--active">7</button>
+            <button type="button" id="numero8" class="btnNumber  btnNumber--active">8</button>
+            <button type="button" id="numero9" class="btnNumber  btnNumber--active">9</button>
+            <button type="button" id="resta" class="btnOperador  btnOperador--active">-</button>
+            
+            <button type="button" id="numero4" class="btnNumber  btnNumber--active">4</button>
+            <button type="button" id="numero5" class="btnNumber  btnNumber--active">5</button>
+            <button type="button" id="numero6" class="btnNumber  btnNumber--active">6</button>
+            <button type="button" id="suma" class="btnOperador  btnOperador--active">+</button>
+            
+            <button type="button" id="numero1" class="btnNumber  btnNumber--active">1</button>
+            <button type="button" id="numero2" class="btnNumber  btnNumber--active">2</button>
+            <button type="button" id="numero3" class="btnNumber  btnNumber--active">3</button>
+            <button type="button" id="igual" class="btnIgual  btnOperador  btnOperador--active">=</button>
+            
+            <button type="reset" id="resetear" class="btnOperador  btnOperador--active">C</button>
+            <button type="button" id="numero0" class="btnNumber  btnNumber--active">0</button>
+            <button type="button" id="decimal" class="btnOperador  btnOperador--active">.</button>
+        </form>
+
+        <script src="./js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    </body>
+</html>

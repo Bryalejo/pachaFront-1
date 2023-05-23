@@ -1,0 +1,72 @@
+
+body{
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.todolist{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+    border-radius: 20px;
+    border: green 1px solid;
+    background-color: aqua;
+    padding-bottom: 21px;
+    padding-left: 21px;
+    padding-right: 31px;
+}
+.ingreso-datos{
+    width: 15rem;
+    height: 8rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+.button{
+    padding-top: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+.visualizar-datos{
+    background-color: aquamarine;
+    margin-top: 3rem;
+  
+
+}
+.linea1{
+    width:29rem ;
+    height: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+    border: 1px black solid;
+
+}
+.testada{
+    align-items: center;
+    justify-content: center;
+}
+.border-izquierdo{
+    border-left: 1px black solid;
+}
+.linea2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px black solid;
+    width:29rem ;
+    height: 1rem;
+
+
+}
+.linea3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px black solid;
+    width:29rem ;
+    height: 1rem;
+
+
+}
+

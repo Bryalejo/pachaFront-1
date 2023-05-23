@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/vendors/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form id="formTodoList">
+            <div class="mb-3">
+                <label for="descripcionTarea" class="form-label">Tarea</label>
+                <input id="descripcionTarea" type="text" class="form-control" aria-describedby="tarea" required>
+            </div>
+            <div class="mb-3">
+                <label for="fechaEntrega" class="form-label">Fecha Entrega</label>
+                <input id="fechaEntrega" type="date" class="form-control" name="fechaEntrega" required
+                    pattern="\d{4}-\d{2}-\d{2}">
+            </div>
+            <div class="container my-3 bg-light">
+                <div class="col-md-12 text-center">
+                    <button id="agregarTodoList" type="submit" class="btn btn-primary">Agregar</button>
+                    <button id="limpiarTodoList" type="reset" class="btn btn-warning">Limpiar</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="mt-5">
+            <h1 class="text-center">Todo - List</h1>
+            <table id="tablaTodoList" class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Tarea</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaBodyTodoList">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="assets/js/TodoList.js"></script>
+    <script src="assets/vendors/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

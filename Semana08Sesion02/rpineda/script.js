@@ -36,8 +36,7 @@ function calculadora() {
         case 'division':
             respuesta = primerNumero * segundoNumero;
             break;
-        default:
-            alert("Escoja una operacion");
+        
     }
 
 
