@@ -1,0 +1,19 @@
+.contenido {
+    width: 90%;
+    max-width: max-content;
+    display: grid;
+    margin: 20px auto;
+    
+}
+
+.contenido .img{
+    width: 10em;
+}
+
+.dropdown{
+    margin-inline: auto;
+}
+
+.accordion-item{
+    width: 18em;
+}

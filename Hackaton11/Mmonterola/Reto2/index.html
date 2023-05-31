@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora Max Monterola</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <input type="text" id="output" readonly>
+        </div>
+        <div class="buttons">
+            <div class="cuadrouno">
+                <div class="cua1">
+                    <button onclick="appendToOutput('1')">1</button>
+                    <button onclick="appendToOutput('2')">2</button>
+                    <button onclick="appendToOutput('3')">3</button>
+                </div>
+                <div class="cua1">
+                    <button onclick="appendToOutput('4')">4</button>
+                    <button onclick="appendToOutput('5')">5</button>
+                    <button onclick="appendToOutput('6')">6</button>
+                </div>
+                <div class="cua1">
+                    <button onclick="appendToOutput('7')">7</button>
+                    <button onclick="appendToOutput('8')">8</button>
+                    <button onclick="appendToOutput('9')">9</button>
+                </div>
+                <div class="cua1">
+                    <button onclick="operate('%')">%</button>
+                    <button onclick="appendToOutput('0')">0</button>
+                    <button onclick="operate('^')">^</button>
+                </div>
+            </div>
+            <div class="cuadrodos">
+                <div class="cua2">
+                    <button class="C" onclick="clearOutput()">C</button>
+                </div>
+                <div class="cua3">
+                    <button onclick="operate('+')">+</button>
+                    <button onclick="operate('-')">-</button>
+                </div>
+                <div class="cua3">
+                    <button onclick="operate('*')">*</button>
+                    <button onclick="operate('/')">/</button>
+                </div>
+                <div class="cua2">
+                    <button class="C" onclick="calculate()">=</button>
+                </div>
+            </div>
+            <!-- <div class="row">
+        <button onclick="appendToOutput('7')">7</button>
+        <button onclick="appendToOutput('8')">8</button>
+        <button onclick="appendToOutput('9')">9</button>
+        <button onclick="operate('+')">+</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToOutput('4')">4</button>
+        <button onclick="appendToOutput('5')">5</button>
+        <button onclick="appendToOutput('6')">6</button>
+        <button onclick="operate('-')">-</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToOutput('1')">1</button>
+        <button onclick="appendToOutput('2')">2</button>
+        <button onclick="appendToOutput('3')">3</button>
+        <button onclick="operate('*')">*</button>
+      </div>
+      <div class="row">
+        <button onclick="appendToOutput('0')">0</button>
+        <button onclick="clearOutput()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="operate('/')">/</button>
+      </div>
+      <div class="row">
+        <button onclick="operate('%')">%</button>
+        <button onclick="operate('^')">^</button>
+      </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

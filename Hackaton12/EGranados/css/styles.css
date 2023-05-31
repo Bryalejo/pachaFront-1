@@ -1,0 +1,23 @@
+.collapsible-group {
+    margin-bottom: 20px;
+}
+.collapsible {
+    background-color: #f9f9f9;
+    color: lightcoral;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.collapsible:hover {
+    background-color: #e6e6e6;
+}
+.content {
+    display: none;
+    padding: 12px;
+    background-color: #fff;
+    color: lightslategray;
+}

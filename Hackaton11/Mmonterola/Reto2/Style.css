@@ -1,0 +1,79 @@
+.calculator {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #706e6e;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+  }
+
+  .cuadrouno{
+    width: 155px;
+    height: 250px;
+    align-items: center;
+  justify-content: center;
+  }
+  .cuadrodos{
+    width: 85px;
+    height: 100%;
+  }
+  .cua1{
+    width: 100%;
+    margin-top:8px;
+    display: flex;
+  justify-content: space-between;
+  }
+  .cua2{
+    width: 100%;
+    margin-top:8px;
+    display: flex;
+  justify-content: space-between;
+  }
+  .cua3{
+    width: 100%;
+    margin-top:8px;
+    display: flex;
+  justify-content: space-between;
+  }
+
+  .calculator .screen {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .calculator input {
+    width: 96.5%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+  }
+  
+  .calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .calculator button {
+    padding: 14px;
+    font-size: 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .cua2 .C{
+    width: 100%;
+  }
+  
+  .calculator button:hover {
+    background-color: #ccc;
+  }
+  

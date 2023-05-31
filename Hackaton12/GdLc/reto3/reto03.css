@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8b29a;
+    
+    
+}
+
+
+.modal-content{
+    min-height: 100vh;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 25px;
+    border-color:cornflowerblue;
+   
+}
+
+
+.modal-buttons :hover{
+background-color: rgb(24, 108, 235);
+}
+
+

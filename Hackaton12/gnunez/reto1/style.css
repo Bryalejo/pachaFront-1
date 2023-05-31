@@ -1,0 +1,36 @@
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: gray;
+  }
+  
+  .dropdown-selected {
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+  }
+  
+  .dropdown-icon {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #f2f2f2;
+  }
+  
