@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+
+            <div class="col p-3 text-dark" style="background: #E5E5E5;">
+                
+                <h1>Dog Crud</h1>
+            </div>
+        </div>
+            
+    </header>
+    <section class="forms">
+
+        <form class="form-horizontal ">
+            <fieldset>
+                
+                <!-- Form Name -->
+                <legend>Agregar Mascota</legend>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="Nombre"></label>
+                    <div class="controls">
+                        <input id="Nombre" name="Nombre" type="text" placeholder="Nombre" class="input-xlarge" required="">
+                        
+                    </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="Apellido"></label>
+                    <div class="controls">
+                        <input id="Apellido" name="Apellido" type="text" placeholder="Apellido" class="input-xlarge" required="">
+                        
+                    </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="raza"></label>
+                    <div class="controls">
+                        <input id="raza" name="raza" type="text" placeholder="raza" class="input-xlarge" required="">
+                        
+                    </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="telef"></label>
+                    <div class="controls">
+                        <input id="telef" name="telef" type="text" placeholder="Telefono" class="input-xlarge" required="">
+                        
+                    </div>
+                </div>
+        
+                <!-- Select Basic -->
+                <div class="control-group">
+                    <label class="control-label" for="pais" ></label>
+                    <div class="controls">
+                        <select id="pais" name="pais" class="input-xlarge" placeholder="Pais">
+                            <option value="" disabled selected hidden>Pais</option>
+                            <option>Peru</option>
+                            <option>Brasil</option>
+                            <option>Argentina</option>
+                            <option>Venezuela</option>
+                            <option>Uruguay</option>
+                            <option>Chile</option>
+                            <option>Bolivia</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="Url"></label>
+                    <div class="controls">
+                        <input id="Url" name="Url" type="text" placeholder="Url de Fotografia" class="input-xlarge" required="">
+                        
+                    </div>
+                </div>
+                
+                <!-- Textarea -->
+                <div class="control-group">
+                    <label class="control-label" for="descrip"></label>
+                    <div class="controls">                     
+                        <textarea id="descrip" name="descrip" placeholder="Sobre él/ella"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Button (Double) -->
+                <div class="control-group">
+                    <label class="control-label" for="doblebut"></label>
+                    <div class="controls">
+                        <button id="doblebut" name="doblebut" class="btn btn-default">Aceptar</button>
+                        <button id="Cancelar" name="Cancelar" class="btn btn-default">Cancelar</button>
+                    </div>
+                </div>
+                
+            </fieldset>
+        </form>
+        
+        
+    </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    </body>
+    </html>
