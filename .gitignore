@@ -20,3 +20,5 @@ yarn-error.log*
 *.sln
 *.sw*
 *.mp3
+ngrok
+.DS_Store
